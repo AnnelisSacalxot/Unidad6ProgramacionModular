@@ -1,6 +1,10 @@
 package src;
 import java.util.*;
 
+/*Crea un array numérico con 5 elementos. Los números de cada elemento deben ser valores
+pedidos por teclado al usuario. Muestra por consola el índice y el valor al que corresponde. Se
+Debe utilizar bucles tanto para pedir los valores de los elementos del array como para mostrar su
+contenido por pantalla.*/
 
 public class Ejercicio1_3 {
 
