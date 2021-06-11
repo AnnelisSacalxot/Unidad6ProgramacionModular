@@ -22,8 +22,10 @@ public class Ejercicio2_3{
 		}
 
         //Mostramos el número mayor del arreglo;
-            int numeroMayor = repitenciaNumeroMayor();
+            int numeroMayor = mostrarNumeroMayor();
             System.out.println("El  número mayor entre los 10 número es: "+numeroMayor);
+            int repetidos =  repitenciaNumeroMayor(elementos, numeroMayor);
+           System.out.println("El número mayor se repite: "+repetidos);
 	}
 
 	public void mostrarNumeros(int numero){
@@ -36,7 +38,8 @@ public class Ejercicio2_3{
 	}
 
 	//Obtener el número mayor del arreglo y la repitencia
-	public int repitenciaNumeroMayor(){
+
+	public int mostrarNumeroMayor() {
 
 		int numeroMayor = 0;
 		for (int k = 0; k < elementos.length ; k++ ) {
@@ -49,5 +52,19 @@ public class Ejercicio2_3{
                 
         return numeroMayor;
 	}
+
+        public static int repitenciaNumeroMayor(int[] array, int elemento){
+        
+         int repetidos = 0;
+         s
+            for (int l = 0; l < array.length; l++) {
+                if (array[l] == elemento){
+                } else {
+                    repetidos++;
+                }
+            }
+        return repetidos;
+        
+        }
 
 }
