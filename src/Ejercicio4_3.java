@@ -1,31 +1,30 @@
 package src;
 import java.util.*;
-import java.lang.Math;
 
+/*Leer 10 valores de un array de enteros y deducir cuál es la distancia que les separa del número
+mayor. Los números ingresados en el array deben de generarse aleatoriamente.*/
 
-/*Hacer un programa que llene un array de 10 enteros con números aleatorios del 0 al 99, luego
-de eso los muestre en pantalla y diga cuál es el elemento mayor y cuántas veces se repite.*/
-
-public class Ejercicio2_3{
+public class Ejercicio4_3{
 
 	public static void main(String[] args){
-		Ejercicio2_3 t = new Ejercicio2_3();
+		Ejercicio4_3 t = new Ejercicio4_3();
 	}
 
 	//Declarando mis variables globales
 	int[] elementos = new int[10];
 
-	public Ejercicio2_3(){
+	public Ejercicio4_3(){
 
 		for (int i =0;i<10 ;i++ ) {
 			mostrarNumeros(i);
 		}
 
-        //Mostramos el número mayor del arreglo;
+		for (int i =0;i<10 ;i++ ) {
+			diferenciaNumero();
+		}
+		 //Mostramos el número mayor del arreglo;
             int numeroMayor = mostrarNumeroMayor();
             System.out.println("El  número mayor entre los 10 número es: "+numeroMayor);
-            int repetidos =  repitenciaNumeroMayor(elementos, numeroMayor);
-           System.out.println("El número mayor se repite: "+repetidos);
 	}
 
 	public void mostrarNumeros(int numero){
@@ -53,17 +52,24 @@ public class Ejercicio2_3{
         return numeroMayor;
 	}
 
-        public static int repitenciaNumeroMayor(int[] array, int elemento){
-        
-         int repetidos = 0;
-            for (int l = 0; l < array.length; l++) {
-                if (array[l] == elemento){
-                } else {
-                    repetidos++;
-                }
+//Se hará la diferencia de el valor mayor y el valor random
+	public void diferenciaNumero(){
+
+            int mayor= 0, menor=0, resultado=0;
+            resultado = mayor - menor;
+
+		mayor=menor=elementos[0];
+        for (int l = 0; l < elementos.length; l++) {
+            if(elementos[l]>mayor){
+                mayor=elementos[l];
             }
-        return repetidos;
+            if(elementos[l]<menor){
+                menor=elementos[l];
+            }
+        } 
         
-        }
+            System.out.println("La diferencia entre el número es:"+resultado);
+
+		}
 
 }
